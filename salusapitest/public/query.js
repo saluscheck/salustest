@@ -17,6 +17,7 @@ function getData() {
     fetch(url)
       .then((res) => { return res.json() })
       .then((data) => {
+        console.log(data)
         if(data.length == 0) {
           console.log("Empty")
           document.getElementById('loader').style.display = "none";
@@ -33,6 +34,9 @@ function getData() {
                 {title:"Voornaam", field: "nameAlias.firstName"},
                 {title:"Achternaam", field: "nameAlias.lastName"},
                 {title:"Volledige naam", field: "nameAlias.wholeName"},
+                {title:"Regulation url", field: "regulation.0.publicationUrl", formatter:"link", formatterParams:{
+                  target: "_blank"
+              }}
             ],
         });
         document.getElementById('loader').style.display = "none";
