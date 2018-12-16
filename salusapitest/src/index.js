@@ -4,6 +4,7 @@ let personRoute = require('./routes/person')
 let customerRoute = require('./routes/customer')
 let sanctionsRoute = require('./routes/sanctions')
 let sdnRoute = require('./routes/sdn')
+let lxnxRoute = require('./routes/lxnx')
 let path = require('path')
 let bodyParser = require('body-parser')
 
@@ -17,6 +18,7 @@ app.use(personRoute)
 app.use(customerRoute)
 app.use(sanctionsRoute)
 app.use(sdnRoute)
+app.use(lxnxRoute)
 app.use(express.static('public'))
 
 // Hander for 404 - Not found
