@@ -13,7 +13,8 @@
 		"event-stream": "^3.3.4",
 		"express": "^4.16.3",
 		"mongoose": "^5.3.2",
-		"node-fetch": "^2.3.0"
+		"node-fetch": "^2.3.0",
+		"xml2js": "^0.4.19"
 	},
 	"devDependencies": {
 		"nodemon": "^1.18.4"

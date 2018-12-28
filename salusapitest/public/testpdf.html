@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TestPDF</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.3.5/jspdf.plugin.autotable.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+         var columns = [
+                {title: "ID", dataKey: "id"},
+                {title: "Name", dataKey: "name"}, 
+                {title: "Country", dataKey: "country"}
+            ];
+            var rows = [
+                {"id": 1, "name": "Shaw", "country": "Tanzania"},
+                {"id": 2, "name": "Nelson", "country": "Kazakhstan"},
+                {"id": 3, "name": "Garcia", "country": "Madagascar"}
+];
+
+            // Only pt supported (not mm or in)
+            var doc = new jsPDF('p', 'pt');
+            doc.autoTable(columns, rows);
+            doc.save('table.pdf');
+        </script>
+    </body>
+</html>

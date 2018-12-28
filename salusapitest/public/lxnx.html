@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SalusTest</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+  <div class="container-fluid">
+    <h1>SalusCheck</h1>
+
+    <form>
+      <div>
+        <label class="m-2" for="search">Zoek gegevens</label>
+        <div class="form-group row">
+          <label class="m-2" for="search">Achternaam</label>
+          <input class="form-control m-2" placeholder="Voer naam in" id="searchString">
+      </div>
+      </div>
+    </form>
+    
+    <!-- Plaats de button buiten het formulier. De query data blijft binnen de scope van de functie
+    en die weer binnen de scope van het parent element.
+    -->
+    <div>
+      <button class="btn btn-warning btn-lg m-2" id="getData">Zoek naam</button>
+    </div>
+    
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#eu">EU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#ofac">OFAC</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#peps">Peps</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#interpol">Interpol</a>
+          </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane container active" id="eu">EU data</div>
+        <div class="tab-pane container fade" id="ofac">OFAC data</div>
+        <div class="tab-pane container fade" id="peps">Peps data</div>
+        <div class="tab-pane container fade" id="interpol">Interpol data</div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row" id="loader"></div>
+      <p id="result"></p>
+    </div>
+  </div>
+
+
+<script src="query.lxnx.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
