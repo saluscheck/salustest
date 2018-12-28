@@ -3,10 +3,11 @@ document.getElementById('getData').addEventListener('click', getData);
 function getData() {
   // Bij deployment op Google App Engine poortnummer verwijderen - Bij testen op localhost toevoegen
   // https://salustest-7df6a.appspot.com/sanctions?search=
+  // http://localhost:8080/sanctions?search=
   // Online API kan niet in client worden gebruikt bij test op localhost vanwege CORS
     
     document.getElementById('example-table').innerHTML = ""
-    var api_path = "http://localhost:8080/sanctions?search="
+    var api_path = "https://salustest-7df6a.appspot.com/sanctions?search="
     var naam = document.getElementById("searchString").value
     var url = api_path + naam
     console.log(naam)
