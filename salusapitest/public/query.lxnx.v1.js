@@ -6,7 +6,7 @@ function getData() {
   // https://salustest-7df6a.appspot.com/lxnx?search=
   // http://localhost:8080/lxnx?search=
   // Online API kan niet in client worden gebruikt bij test op localhost vanwege CORS
-    var api_path = "https://salustest-7df6a.appspot.com/lxnx?search="
+    var api_path = "http://localhost:8080/lxnx?search="
     var naam = document.getElementById("Name").value
     var url = api_path + naam
     console.log(naam)
