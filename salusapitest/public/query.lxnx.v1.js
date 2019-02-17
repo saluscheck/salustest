@@ -28,7 +28,7 @@ function getData() {
               `
                 <div class="container">
                   <h2>Zoekresultaten (${data.length} items)</h2>
-                  <table class="table table-hover">
+                  <table id="result-table" class="table table-hover">
                   <thead>
                       <tr>
                         <th>Bron</th>
@@ -83,6 +83,6 @@ var rows = globalData;
 var doc = new jsPDF({
   orientation: 'landscape'
 });
-doc.autoTable(columns, rows);
+doc.autoTable(columns, rows, {styles: {overflow: 'linebreak'}});
 doc.save('sanctions.pdf');
 }
