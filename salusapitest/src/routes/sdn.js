@@ -2,7 +2,7 @@ let SdnModel = require('../models/sdn.models')
 let express = require('express')
 let router = express.Router()
 
-// GET localhost:3000/sanctions
+// GET localhost:8080/sanctions
 router.get('/sdn', (req, res) => {
   if(!req.query.search) {
     return res.status(400).send('Missing URL parameter: firstName')

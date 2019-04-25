@@ -16,7 +16,7 @@ function getData() {
     fetch(url)
       .then((res) => { return res.json() })
       .then((data) => {
-        data = data.Hit
+        data = data
         if(data == undefined) {
           console.log("Empty")
           document.getElementById("loader").style.display = "none";
